@@ -1,0 +1,176 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+.top-nav {
+    background: rgba(255, 182, 193, 0.95);
+    padding: 15px 25px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    color: #5a2d2d;
+    font-weight: bold;
+}
+
+.top-nav ul li a.active {
+    color: #8b4a4a;
+    border-bottom: 2px solid #8b4a4a;
+}
+
+/* HEADER */
+.menu-header {
+    background-image: url('restaurant pink.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 75px;
+    position: relative;
+}
+
+/* Overlay untuk meredupkan */
+.menu-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.30); /* Ubah angka 0.30 -> makin kecil = makin terang */
+    z-index: 0;
+}
+
+.menu-title,
+.menu-subtitle {
+    position: relative;
+    z-index: 1;
+}
+
+.menu-title {
+    font-size: 48px;
+    font-weight: 800;
+    text-shadow: 0 2px 5px black;
+}
+
+.menu-subtitle {
+    font-size: 20px;
+    margin-top: 10px;
+    text-shadow: 0 2px 5px black;
+}
+
+/* BANNER GRID */
+.banner-section {
+    padding: 80px 20px 60px;
+    background: #ffffff;
+}
+
+.banner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* CARD */
+.banner-card {
+    background: #f6d9dd;
+    border: 2px solid #000000;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.banner-card:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.banner-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.banner-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 12px 0 6px;
+    color: #7a3f3f;
+}
+
+.banner-card p {
+    font-size: 15px;
+    color: #5a2d2d;
+    padding: 0 12px 12px;
+}
+
+/* FOOTER */
+footer {
+    background: #b76e79;
+    padding: 15px;
+    margin-top: -5px;
+    color: white;
+    text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .banner-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PROMO ICON */
+.promo-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 90px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* PROMO MESSAGE */
+.promo-message {
+    display: none;
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    background: #b76e79;
+    padding: 12px 18px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 1s;
+}
