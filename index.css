@@ -1,0 +1,200 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+.top-nav {
+    background: rgba(255, 182, 193, 0.95);
+    padding: 15px 25px; /* jarak atas-bawah dan kiri-kanan navbar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;  /* atur posisi horizontal */
+    gap: 35px;               /* jarak antar menu */
+}
+
+.top-nav ul li a {
+    text-decoration: none;
+    color: #5a2d2d;
+    font-weight: bold;
+}
+
+.top-nav ul li a.active {
+    color: #8b4a4a;
+    border-bottom: 2px solid #8b4a4a; /* garis bawah menu aktif */
+}
+
+/* HEADER */
+header {
+    background-image: url('restaurant pink.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 1024px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* dinaikkan sedikit */
+    padding-top: 30px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+}
+
+/* HEADER CONTENT */
+.header-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 1.05s ease-out, transform 1.05s ease-out;
+
+    /* NAIKKAN LEBIH KE ATAS */
+    margin-top: -340px;   /* sebelumnya -120px */
+    margin-bottom: 40px;
+}
+
+.header-content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+header h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+/* TEXT FADE */
+.fade-text {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: fadeUp 1s ease forwards;
+}
+
+/* sedikit lambat */
+.delay-title { animation-delay: 0.45s; }
+.delay-1 { animation-delay: 0.75s; }
+.delay-2 { animation-delay: 1.05s; }
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(18px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* SCROLL ANIMATION */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+.appear {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* CONTAINER */
+.container {
+    padding: 80px 35px;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #8b4a4a;
+}
+
+/* MENU CARDS */
+.menu-group {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu-card {
+    background: #ffe6ea;
+    border: 2px solid #f5c6ce;
+    border-radius: 14px;
+    width: 280px;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.menu-card:hover {
+    transform: scale(1.07);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.menu-card h3 {
+    margin-top: 10px;
+    color: #7a3f3f;
+}
+
+/* FOOTER */
+footer {
+    background: #b76e79;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+/* PROMO ICON */
+.promo-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 90px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* PROMO MESSAGE */
+.promo-message {
+    display: none;
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    background: #b76e79;
+    padding: 12px 18px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+/* ACTIVE NAVBAR ITEM */
+.top-nav ul li a.active {
+    color: #8b4a4a;       /* warna lebih gelap dari default */
+    border-bottom: 2px solid #8b4a4a;
+    padding-bottom: 3px;
+}
