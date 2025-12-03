@@ -1,0 +1,164 @@
+/* RESET */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER PROMO */
+.promo-header {
+    background-image: url('restaurant pink.png');
+    background-size: cover;
+    background-position: center;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 65px;
+    position: relative;
+}
+
+.promo-title {
+    color: white;
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: 0.8s ease;
+}
+
+.promo-title.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* SUBTITLE */
+.promo-subtitle {
+    text-align: center;
+    font-size: 28px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* GRID PROMO — FIX CENTER 100% */
+.promo-grid {
+    margin: 10px auto 60px;
+
+    width: 100%;
+    max-width: 900px; /* dipersempit agar card simetris di tengah */
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+
+    justify-items: center;   /* tiap card berada di tengah kolom */
+    align-items: start;
+
+    padding: 0 10px;
+}
+
+/* CARD */
+.promo-card {
+    position: relative;
+    background: #060505;
+    border: 2px solid #f5c6ce;
+    border-radius: 18px;
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 380px;
+    height: 520px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+    transition: 0.3s ease;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.promo-card.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.promo-card img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.promo-card:hover img {
+    transform: scale(1.07);
+}
+
+/* TEXT AREA */
+.promo-info {
+    padding: 15px 20px;
+    height: 25%;
+    background: #fff5f7;
+    text-align: center;
+}
+
+.promo-info h3 {
+    margin: 5px 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.promo-info p {
+    font-size: 15px;
+    color: #444;
+    margin-top: 5px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .promo-header {
+        height: 380px;
+    }
+
+    .promo-title {
+        font-size: 36px;
+    }
+
+    .promo-grid {
+        grid-template-columns: 1fr;
+        max-width: 360px; /* supaya card tetap center */
+        gap: 28px;
+    }
+
+    .promo-card {
+        height: 500px;
+        max-width: 330px;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-header {
+        height: 320px;
+    }
+
+    .promo-title {
+        font-size: 30px;
+    }
+
+    .promo-card {
+        height: 460px;
+    }
+}
+
+footer {
+    background: #b76e79;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    margin-top: -45px; /* dikurangi dari 60px */
+    font-size: 15px;
+}
+
