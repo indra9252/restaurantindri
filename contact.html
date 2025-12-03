@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Rose Gold Resto</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="top-nav">
+        <ul>
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="reservasi.html">Reservasi</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="promo.html">Promo</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTACT HEADER -->
+    <header class="contact-header">
+        <div class="overlay"></div>
+
+        <h1 class="contact-title">Hubungi Kami</h1>
+        <p class="contact-subtitle">nabaline — Always Here for You</p>
+    </header>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <div class="contact-container">
+
+            <a href="mailto:nafisahglobaldine@gmail.com" class="contact-card">
+                <img src="logo email pink.png" alt="Email" class="icon">
+                <h3>Email</h3>
+                <p>nafisahglobaldine@gmail.com</p>
+            </a>
+
+            <a href="tel:081234567890" class="contact-card">
+                <img src="logo wasap pink.png" alt="Telepon" class="icon">
+                <h3>Telepon</h3>
+                <p>0812-3456-7890</p>
+            </a>
+
+            <div class="contact-card" data-link="https://www.instagram.com/nidrynf">
+                <img src="logo instagram pink.png" class="icon">
+                <h3>Instagram</h3>
+                <p>@nidrynf</p>
+            </div>
+
+            <div class="contact-card" data-link="https://www.tiktok.com/@dreyliciousoo">
+                <img src="logo tiktok pink.png" class="icon">
+                <h3>TikTok</h3>
+                <p>@dreyliciousoo</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FORM KRITIK & SARAN -->
+    <section class="form-section">
+        <h2 class="form-title">Punya masukan atau kritik dan saran?<br>Yuk isi form berikut!</h2>
+
+        <form class="contact-form">
+            <label>Email *</label>
+            <input type="email" placeholder="e.g. email@example.com" required>
+
+            <label>Subject</label>
+            <input type="text" placeholder="e.g. Informasi / Masukan">
+
+            <label>Pesan Kamu *</label>
+            <textarea placeholder="Tulis kritik, masukan, atau saran kamu di sini..." required></textarea>
+
+            <button type="submit" class="submit-btn">Kirim</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Nafisah Global Dine | Crafted with ♥ by Indriyani Nafisah Nurlatifah</p>
+    </footer>
+
+    <img src="promo pink.png" alt="Promo" class="promo-icon" onclick="goPromo()">
+
+    <script src="contact.js"></script>
+</body>
+</html>
